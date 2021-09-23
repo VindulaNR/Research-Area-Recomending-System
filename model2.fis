@@ -1,0 +1,72 @@
+[System]
+Name='model2'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Coding'
+Range=[0 100]
+NumMFs=3
+MF1='poor':'trapmf',[-32.8 -7.2 10 35]
+MF2='average':'trimf',[25 50 75]
+MF3='good':'trapmf',[65 90 104 136]
+
+[Input2]
+Name='DataStructures'
+Range=[0 100]
+NumMFs=3
+MF1='poor':'trapmf',[-36 -4 10 35]
+MF2='average':'trimf',[25 50 75]
+MF3='good':'trapmf',[65 90 104 136]
+
+[Input3]
+Name='Mathematics'
+Range=[0 100]
+NumMFs=3
+MF1='poor':'trapmf',[-36 -4 10 35]
+MF2='average':'trimf',[25 50 75]
+MF3='good':'trapmf',[65 90 104 136]
+
+[Output1]
+Name='Algorithms'
+Range=[0 100]
+NumMFs=2
+MF1='NotRecomand':'trapmf',[0 0 10 70]
+MF2='Recomand':'trapmf',[50 100 100 100]
+
+[Rules]
+1 1 1, 1 (1) : 1
+1 1 2, 1 (1) : 1
+1 1 3, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 2 2, 1 (1) : 1
+1 2 3, 1 (1) : 1
+1 3 1, 1 (1) : 1
+1 3 2, 2 (1) : 1
+1 3 3, 2 (1) : 1
+2 1 1, 1 (1) : 1
+2 1 2, 1 (1) : 1
+2 1 3, 1 (1) : 1
+2 2 1, 1 (1) : 1
+2 2 2, 1 (1) : 1
+2 2 3, 2 (1) : 1
+2 3 1, 1 (1) : 1
+2 3 2, 2 (1) : 1
+2 3 3, 2 (1) : 1
+3 1 1, 1 (1) : 1
+3 1 2, 1 (1) : 1
+3 1 3, 1 (1) : 1
+3 2 1, 1 (1) : 1
+3 2 2, 2 (1) : 1
+3 2 3, 2 (1) : 1
+3 3 1, 1 (1) : 1
+3 3 2, 2 (1) : 1
+3 3 3, 2 (1) : 1
